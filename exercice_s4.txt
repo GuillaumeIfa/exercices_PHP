@@ -1,0 +1,109 @@
+-- Exercice 0 : 
+
+Pour mon jogging, il faut que je fasse 5 fois le tour du parc.
+    - au départ je n'ai pas encore fait de tour de parc. J'ai donc fait 0 tour de parc.
+    - à chaque fois que je fait un tour du parc, je retiens que j'ai fait un tour et j’affiche que je viens de faire un tour de parc.
+    - une fois que notre jogging est fini (5 tours), j’affiche que mon jogging est fini car j'ai fait 5 tours et c'est la fin du programme.
+
+-- Exercice 1 :
+
+Ecrire un script PHP qui regarde dans un tableau et qui nous dit quel est le plus grand et le plus petit élément du tableau.
+Ne pas utiliser de fonctions.
+
+-- Exercice 2 :
+
+Même exercice mais en donnant la position des éléments dans le tableau
+
+-- Exercice 3 :
+
+Ecrire un script PHP qui calcule le nombre d'entiers pairs et impairs d'un tableau d'entiers.
+
+-- Exercice 4 :
+
+A partir de 2 tableaux de même longueur, écrire un script PHP qui va créer un nouveau tableau.
+Ce nouveau tableau sera la somme des éléments des deux tableaux de départ.
+
+Exemple : 
+$tab1 = array(9, 20, 10, 3, 25, 2, 4);
+$tab2 = array(2, 5, 13, 3, 1, 11, 7);
+
+$resultat = array(11, 25, 23, 6, 26, 13, 11);
+
+-- Exercice 5 :
+
+Etant donné un tableau à plusieurs dimensions qui contient des informations sur des étudiants :
+
+$students = array(
+    "john" => array(
+        "classe" => "devweb",
+        "note" => 12.5
+    ),
+    "bob" => array(
+        "classe" => "devlog",
+        "note" => 15
+    ),
+    "max" => array(
+        "classe" => "devweb",
+        "note" => 2.5
+    ),
+    "julien" => array(
+        "classe" => "devweb",
+        "note" => 4
+    ),
+    "stephane" => array(
+        "classe" => "devlo",
+        "note" => 8
+    ),
+    "julie" => array(
+        "classe" => "devweb",
+        "note" => 11
+    ),
+    "christelle" => array(
+        "classe" => "devweb",
+        "note" => 17
+    ),
+    "charles" => array(
+        "classe" => "devweb",
+        "note" => 14
+    )
+);
+
+
+En partant du tableau 'students': 
+    a) calculez la moyenne de chaque classe.
+    b) Récuperez le nombre d'étudiants dans chaque classe.
+    c) Récupérez les étudiants qui ont plus que la moyenne de la classe 'devweb'.
+
+-- Exercice 6 :
+
+Ecrire un script PHP qui permet d'inverser un tableau.
+
+-- Exercice 7 :
+
+Donner le résultat de la multiplication de 2 nombres en utilisant uniquement l'addition.
+
+-- Exercice 8 :
+
+A partir de 2 tableaux, écrire un script PHP qui va calcuer le schtroumpf des deux tableaux.
+Pour calculer le schtroumpf, il faut multipier chaque élément du tableau 1 par chaque élément du tableau 2 et additionner le tout.
+
+Par exemple :  
+$tab1 = array(9, 20, 10, 3);
+$tab2 = array(2, 5);
+
+$resultat = 2*9 + 2*20 + 2*10 + 2*3 + 5*9 + 5*20 + 5*10 + 5*3;
+
+-- Exercice 9 :
+
+Soit un tableau à deux dimensions remplis de valeurs numérique.
+Ecrire un script PHP qui recherche la plus grande valeur au sein de ce tableau.
+
+Exemple de tableau : 
+
+$array = array(
+    0 => array(4,6),
+    1 => array(10,3),
+    2 => array(2,9),
+    3 => array(0,1),
+    4 => array(23,4),
+);

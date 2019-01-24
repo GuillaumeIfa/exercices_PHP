@@ -1,0 +1,243 @@
+Tous les exercices ont une contrainte en commun : il faut utiliser une boucle.
+
+-- Exercice 1 :
+
+$array = array( "France" => "Paris", "Italy"=>"Rome", "Luxembourg"=>"Luxembourg", "Belgium"=> "Brussels", "Denmark"=>"Copenhagen", "Finland"=>"Helsinki", "Slovakia"=>"Bratislava", "Slovenia"=>"Ljubljana", "Germany" => "Berlin", "Greece" => "Athens", "Ireland"=>"Dublin", "Netherlands"=>"Amsterdam", "Portugal"=>"Lisbon", "Spain"=>"Madrid", "Sweden"=>"Stockholm") ;
+
+Ecrire un script PHP qui affiche le Pays ET la Capitale sur chaque ligne. Il faut afficher cette liste dans l'ordre alphabétique coissant.
+
+Exemple :
+La capitale de France est Paris 
+La capitale de Italie est Rome
+La capitale de Luxembourg est Luxembourg
+
+-- Exercice 2 :
+
+Jean va faire ses courses. Il a noté le nom et le prix de tous les articles dans son caddie.
+Nous avons donc le tableau qui contient sa liste de course et le prix associé de chaque article :
+    $array = array("Salade"=>"1.03","Tomate"=>"2.3","Oignon"=>"1.85","Chou rouge"=>"0.85")
+
+Ecrire un script PHP qui va trier le tableau associatif :
+    a) Trié par valeur et ordre croissant
+    b) Trié par clé et ordre croissant
+    c) Trié par valeur et ordre décroissant
+    d) Trié par clé et ordre décroissant
+
+-- Exercice 3 :
+
+Reprenons le tableau des courses de Jean. Avant de passer en caisse, il aimerait connaitre le prix total de ses courses.
+Ecrire un script PHP qui va calculer le prix total de ses courses. Il faut utiliser une boucle.
+
+-- Exercice 4 : 
+
+Ecrire un script PHP qui va écrire un nombre sur deux, de 0 à 20.
+Ecrire le script avec deux types de boucle : for et while.
+> Le but est de savoir utiliser les deux boucles.
+
+-- Exercice 5 :
+
+Nous avons un tableau qui associe une personne et sa croissance :
+    $array = array("Marie" => "Adulte", "Stephane" => "Enfant", "Alexandre" => "Adulte", "Julie" => "Adolescent", "Sarah" => "Adulte", "Remi" => "Enfant")
+
+Ecrire un script PHP qui affiche les adultes et les enfants (pas les adolescent) :
+    Les adultes sont : Marie, Alexandre, Sarah.
+    Les enfants sont : Stephane, Remi.
+
+-- Exercice 6 :
+
+Utiliser une boucle pour créer un tableau.
+Ce tableau contiendra la table de multiplication de 2.
+Table de multiplication de 1 à 10.
+
+-- Exercice 7 : 
+
+Ecrire un script PHP qui affiche ce motif :
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+
+Pour cela, utiliser plusieurs boucles imbriquées.
+
+-- Exercice 8 : 
+
+Ecrire un script PHP qui affiche ce motif :
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+
+
+-- Exercice 9 :
+
+Nous avons déjà deux tableaux existant :
+    $array1 = array(
+        0 => array("Eminem", "IAM"), 
+        1 => array("Madonna", "Katy Perry"), 
+        2 => array("Pink Floyd", "AC/DC")
+    );
+    
+    
+    
+    $array2 = array(
+        0 => "Rap",
+        1 => "Pop", 
+        2 => "Rock"
+    );   
+    
+ 
+Ecrire un script PHP qui fusionne les deux tableaux pour obtenir un seul tableau comme celui-ci :
+
+    $array3 =  array (      
+        "Rap" => Array (          
+            [0] => "Eminem",              
+            [1] => "IAM"    
+        ),  
+        "Pop" => Array (          
+            [0] => "Madonna",              
+            [1] => "Katy Perry"    
+        ),
+        "Rock" => Array (          
+            [0] => "Pink Floyd",              
+            [1] => "AC/DC"    
+        )            
+    )
+
+
+Utiliser une boucle.
+
+-- Exercice 10 :
+
+Nous avons un tableau de transactions bancaires, qui indique le solde créditeur et débiteur de chaque personne.
+Pour chaque personne, calculez la valeur réelle de leur compte/transaction et ajoutez la en tant que nouvelle "clé"=>"valeur" au tableau.
+
+$transactions = array(
+    "Marie" => array(
+        "debit"=>6,
+        "credit"=>9
+    ),
+    "Julien" => array(
+        "debit"=>21,
+        "credit"=>19
+    ),
+    "Sophie" => array(
+        "debit"=>15,
+        "credit"=>14
+    ),
+    "John" => array(
+        "debit"=>10,
+        "credit"=>14
+    )
+);
+
+// Résultat attendu : 
+$transactions = array(
+    "Marie" => array(
+        "debit"=>6,
+        "credit"=>9,
+        "amount"=>3
+    ),
+    "Julien" => array(
+        "debit"=>21,
+        "credit"=>19,
+        "amount"=>-2
+    ),
+    "Sophie" => array(
+        "debit"=>15,
+        "credit"=>14,
+        "amount"=>-1
+    ),
+    "John" => array(
+        "debit"=>10,
+        "credit"=>14,
+        "amount"=>4
+    )
+);
+
+-- Exercice 11 :
+
+Nous avons un tableau qui contient les 10 plus grandes villes de France.
+Pour chaque ville, nous avons le nombre d'habitant et la superficie (en km).
+
+Pour chaque ville, calculer la densité d’habitants au km2 et rajouter cette valeur en tant que nouvelle "clé"/"valeur".
+
+$cities = array(
+    "Paris" => array(
+        "people"=>2244621,
+        "surface"=>105,4
+    ),
+    "Marseille" => array(
+        "people"=>852516,
+        "surface"=>240,6
+    ),
+    "Lyon" => array(
+        "people"=>496343,
+        "surface"=>47,87
+    ),
+    "Toulouse" => array(
+        "people"=>453317,
+        "surface"=>118,3
+    ),
+    "Nice" => array(
+        "people"=>343629,
+        "surface"=>71,92
+    ),
+    "Nantes" => array(
+        "people"=>291604,
+        "surface"=>65,19
+    ),
+    "Strasbourg" => array(
+        "people"=>274394,
+        "surface"=>78,26
+    ),
+    "Montpellier" => array(
+        "people"=>2244621,
+        "surface"=>105,4
+    ),
+    "Bordeaux" => array(
+        "people"=>241287,
+        "surface"=>49,36
+    ),
+    "Rennes" => array(
+        "people"=>209860,
+        "surface"=>50,39
+    ),
+);
+
+
+-- Exercice 12 :
+
+Nous avons un tableau d'entier, non trié, avec tous les nombres de 1 à 50 MAIS il manque un élément (le tableau est donc de taille 49).
+L'objectif est de retrouver l’élément qui manque (le nombre manquant).
+Cependant, vous avez 3 contraintes:
+- Vous n'avez le droit de parcourir le tableau qu'une seule fois!
+- Vous n'avez le droit d'utiliser qu'une seule variable!
+- Vous n'avez pas le droit d'utiliser de fontion!
+
+    Exemple avec un tableau de 9 éléments:
+    
+        $array = array(5, 1, 3, 2, 9, 6 ,8, 4, 10);
+        // Le nombre manquant est 7
+
+        $var = ...
+
+        for (int i = 0; i < count($array); ++i)
+        {
+            ...
+        }
+
+        echo "Le nombre manquant est : " . $var;
+
+
+
+        9 48
+        10 55
