@@ -51,7 +51,7 @@
 			echo '<h2> Exercice I</h2><br>';
 			echo '<h3> Exercice I.I </h3><br>';
 
-			$text = 'This is a random sentence';
+			$text = 'This is a random sentence, it is totally random';
 
 			echo $text. '<br>';
 
@@ -205,14 +205,47 @@
 			echo '<br><br><hr><br><br>';
 			echo '<h2> Exercice VIII</h2><br>';
 
-
+			function multi($x=0,$y=0)
+			{
+				return $x*$y;
+			}
 			
+			echo 'Résultat de la fonction avec 10 et 2: ' .multi(10,2). ".<br>";
+			echo 'Résultat de la fonction avec 4: ' .multi(4). ".<br>";
 
 
+			echo '<br><br><hr><br><br>';
+			echo '<h2> Exercice IX</h2><br>';
 
+			function countwords($text)
+			{
+				$tableau = explode(' ', $text);
+				return count($tableau);
+			}
+		
+			echo 'Il y a ' .countwords($text). ' mot(s) dans la phrase : "' .$text. '".<br>';
 
+			echo '<br><br><hr><br><br>';
+			echo '<h2> Exercice X</h2><br>';
 			
+			function countEachWords($text)
+			{
+				$tableau = explode(' ', $text);
+				$tableau2 = array ();
+				$compte = 0;
+				var_dump($tableau);
+				foreach ($tableau as $key => $value) 
+				{
+					$tableau2[$value][$key] = $tableau[$key];
+				}
 
+
+				var_dump($tableau2['is']);
+				var_dump($tableau2);
+				var_dump($compte);
+			}
+
+			echo countEachWords($text);
 
 
 
