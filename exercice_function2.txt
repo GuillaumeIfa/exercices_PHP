@@ -1,0 +1,16 @@
+-- Exercice 1 :
+
+Ecrire une fonction récursive qui va :
+	- Prendre un entier (par xple $x) et l'afficher.
+	- Si $x est inférieur à 50, afficher tous les nombres de $x à 50
+
+-- Exercice 2 :
+
+Ecrire une fonction récursive qui va calculer la multiplication de deux nombres en utilisant uniqument l'addition.
+
+-- Exercice 3 : 
+
+Ecrire une fonction récursive qui va calculer le factorielle d'un nombre.
+La factorielle de 5 se note 5! et équivaut à 5! = 5 * 4 * 3 * 2 * 1.
+La factorielle de 5 est donc égal à 120 (5! = 120). 
+Voici l'équation d'une factorielle : n! = n * (n – 1) * … * 3 * 2 * 1
