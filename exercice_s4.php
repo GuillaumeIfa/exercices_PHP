@@ -13,12 +13,14 @@
 				font-family: monospace; 
 				font-size: 20px
 			}
+
 			h6
 			{
 				font-weight: 20;
 				font-size: 10px;
 				letter-spacing: 10px;
 			}
+
 			h2
 			{
 				color: black;
@@ -27,6 +29,7 @@
 				text-shadow: 0px 0px 20px deeppink;
 				text-decoration-style: wavy;			
 			}
+
 			h1
 			{
 				color: black;
@@ -36,6 +39,7 @@
 				text-decoration-style: wavy;
 				text-transform: uppercase;			
 			}
+			
 			p
 			{
 				font-size: 55px;
