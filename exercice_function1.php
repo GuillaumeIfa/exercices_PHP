@@ -232,22 +232,22 @@
 			{
 				$tableau = explode(' ', $text);
 				$tableau2 = array ();
-				$compte = 0;
-				var_dump($tableau);
+
 				foreach ($tableau as $key => $value) 
 				{
 					$tableau2[$value][$key] = $tableau[$key];
 				}
-
-
-				var_dump($tableau2['is']);
-				var_dump($tableau2);
-				var_dump($compte);
+				foreach ($tableau2 as $key => $value) 
+				{
+					$tableau2[$key] = count($tableau2[$key]);
+				}
+				
+				return $tableau2;
 			}
 
-			echo countEachWords($text);
-
-
+			echo '<pre>';
+			print_r(countEachWords($text));
+			echo '</pre>';
 
 
 		?>
