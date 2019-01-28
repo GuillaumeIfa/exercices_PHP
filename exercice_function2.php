@@ -53,7 +53,7 @@
 
 			function compte ($x)
 			{
-				echo $x. ' ';
+				echo $x.' ';
 				$x++;
 
 				if ($x <= 50) 
@@ -62,7 +62,7 @@
 				}
 			}
 
-			compte(10);
+			compte(60);
 
 			echo '<br><hr><br>';
 			echo '<h2> Exercice II</h2><br>';
@@ -72,7 +72,7 @@
 				static $z = 0;
 				static $y = 0;
 				$z++;
-				$y = $y + $x;
+				$y += $x;
 
 				if ($z < $x) 
 				{
@@ -82,12 +82,25 @@
 				return $y;	
 			}
 
-			echo MultAdd(100);
+			echo MultAdd(5);
 
 			echo '<br><hr><br>';
 			echo '<h2> Exercice III</h2><br>';
 
+			function facto($x)
+			{
+				static $y = 1;
+				
+				if ($x >= 1)
+				{
+					$y *= ($x);
+					$x--;
+					facto($x);
+				}
+				return $y;
+			}
 
+			echo facto(5);
 
 
 	 	 ?>
