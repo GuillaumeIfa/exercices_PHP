@@ -106,19 +106,25 @@
 
 			function premier($var)
 			{
-				for ($i=3; $i <  $var ; $i++) 
-				{ 
-					if ($var%2 != 1) 
-					{
-						if ($var/$i)
-						{
-							echo 'Premier !';
-						}
+				
+				if ($var%2 != 0) 
+				{
+					for ($i=2; $i <  $var ; $i++) 
+					{ 
+							if ($var%$i == 1)
+							{
+								echo 'Premier !';
+							}
 					}
 				}
+				else
+				{
+					echo 'Pas Premier';
+				}
+
 			}
 
-			premier(11);
+			premier(7);
 
 			echo '<br><br><hr><br><br>';
 			echo '<h2> Exercice IV</h2><br>';
