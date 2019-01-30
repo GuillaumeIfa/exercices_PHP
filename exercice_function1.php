@@ -105,26 +105,25 @@
 			echo '<h2> Exercice III</h2><br>';
 
 			function premier($var)
-			{
-				
-				if ($var%2 != 0) 
-				{
-					for ($i=2; $i <  $var ; $i++) 
-					{ 
-							if ($var%$i == 1)
-							{
-								echo 'Premier !';
-							}
+			{				
+				for ($i=2; $i <  $var ; $i++) 
+				{ 
+					if ($var%$i == 0)
+					{
+						return false;
 					}
 				}
-				else
-				{
-					echo 'Pas Premier';
-				}
-
+				return true;
 			}
 
-			premier(7);
+			if (premier(4)) // Est égal à premier($var) == true/1 (bouléen)
+			{
+				echo "Mon nombre est premier !";
+			} 
+			else 
+			{
+				echo "Mon nombre n'est pas premier !";
+			}
 
 			echo '<br><br><hr><br><br>';
 			echo '<h2> Exercice IV</h2><br>';
@@ -133,7 +132,7 @@
 			$John = array (2, 7, 9, 12, 6, 13);
 			$dep = 0;
 
-			foreach ($John as $key => $value) 
+			foreach ($John as $value) 
 			{
 				$dep += $value;
 			}
@@ -145,7 +144,7 @@
 			function depense($array)
 			{
 				$var = 0;
-				foreach ($array as $key => $value) 
+				foreach ($array as $value) 
 				{
 					$var += $value;
 				}
@@ -167,17 +166,28 @@
 				{ 
 					if ($var[$i] != $var[$lenth-1]) 
 					{
-						return 'Pas palindrome !';
+						return $var. ' n\'est pas un palindrome !';
 					}
 					elseif ($var[$i] == $var[$lenth-1]) 
 					{
 						$lenth--;
 					}	
 				}
-				return 'Palindrome !';
+				return $var. ' est un palindrome !';
 			}
 
-			echo palindrome('cedric');
+/*			function palindromeSim($var)
+			{
+				for ($i=0; $i < $lenght/2; $i++) { 
+					if ($var[$i] != $var[$lenght-$i-1]) 
+					{
+						return $var. ' n\'est pas un palindrome !';
+					}
+				}
+				return $var. ' est un palindrome';
+			}*/
+
+			echo palindrome('cedrec');
 
 
 			echo '<br><br><hr><br><br>';

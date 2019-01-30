@@ -87,7 +87,7 @@
 			echo '<br><hr><br>';
 			echo '<h2> Exercice III</h2><br>';
 
-			function facto($x)
+		function facto($x)
 			{
 				static $y = 1;
 				
@@ -99,7 +99,7 @@
 				}
 				
 				return $y;
-			}
+			}	
 
 			echo facto(5);
 
