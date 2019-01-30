@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<meta charset="UTF-8">
 	<title>Exercice_s5</title>
 </head>
-<style> 
-			body 
+<style>
+			body
 			{
 				text-align: center; 
 				background-color: black; 
@@ -13,12 +13,14 @@
 				font-family: monospace; 
 				font-size: 20px
 			}
+
 			h3
 			{
 				color: black;
 				text-decoration: underline ;
 				text-shadow: 0px 0px 5px deeppink;
 			}
+
 			h2
 			{
 				color: black;
@@ -27,6 +29,7 @@
 				text-shadow: 0px 0px 20px deeppink;
 				text-decoration-style: wavy;			
 			}
+
 			h1
 			{
 				color: black;
@@ -36,6 +39,7 @@
 				text-decoration-style: wavy;
 				text-transform: uppercase;			
 			}
+
 			p
 			{
 				font-size: 55px;
@@ -43,8 +47,10 @@
 			}
 		</style>
 	<body>
+
 		<h1> Exercice Formulaires I </h1>
-		<br><br><hr><br><br>
+		     <br><br><hr><br><br>
+
 		<h2> Exercice I</h2><br>
 		<h3> Exercice I.I </h3><br>
 
@@ -62,7 +68,7 @@
 			$prenom = "";
 			$nom = "";
 
-			if (isset($_POST['submit1'])) 
+			if (isset($_POST['submit1']))
 			{
 				$prenom = $_POST['prenom'];
 				$nom = $_POST['nom'];
@@ -71,43 +77,58 @@
 			$prenom = strip_tags($prenom);
 			$nom = strip_tags($nom);
 			echo $prenom.' '.$nom;
+		?>
+		
+			<!-- ///////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-			echo '<br><br><hr><br><br>';
-			echo '<h3> Exercice I.II </h3><br>';
+		   <br><br><hr><br><br>
+		<h3> Exercice I.II </h3><br>
 
+		<?php
 
-				$prenom2 = "";
-				$nom2 = "";
-
-				if (isset($_POST['submit2'])) 
-				{
-					$prenom = $_POST['prenom2'];
-					$nom = $_POST['nom2'];
-				}
-
-				$prenom2 = strip_tags($prenom);
-				$nom2 = strip_tags($nom);
-				echo $prenom2.' '.$nom2;
+			$nom2 = $_POST['nom2'];
+			$prenom2 = $_POST['prenom2'];
 
 		?>
 
 		<form name="form2" method="POST" action="exercice_s5.php">
 
-			Prenom:<br><input type="text" value="<?php echo $prenom2; ?>" name="prenom2"><br>
-			Nom:<br><input type="text" value="<?php echo $nom2; ?>" name="nom2"><br>
+			Prenom:<br>
+			<input type="text" value="<?php echo $prenom2; ?>" name="prenom2"><br>
+			Nom:<br>
+			<input type="text" value="<?php echo $nom2; ?>" name="nom2"><br>
 			<input type="submit" name="submit2"><br>
 
 		</form>
 
+		<?php
+
+			if (isset($_POST['submit2']))
+			{
+				$prenom2 = $_POST['prenom2'];
+				$nom2 = $_POST['nom2'];
+			}
+
+			$prenom2 = strip_tags($prenom2);
+			$nom2 = strip_tags($nom2);
+
+			echo $prenom2.' '.$nom2.'<br>';
+
+		?>
+
+
+		<!-- //////////////////////////////////////////////////////////////////////////////////////////// -->
+
 		<br><br><hr><br><br>
 		<h3> Exercice I.III </h3><br>
 
-		<?php 
+		<?php
 
-			$nom3 = "";
-			$prenom3 = "";
+			$nom3 = $_POST['nom3'];
+			$prenom3 = $_POST['prenom3'];
 
 		?>
+
 
 		<form name="form3" method="POST" action="exercice_s5.php">
 
@@ -118,9 +139,9 @@
 		</form>		
 
 
-		<?php  
+		<?php
 
-			if (isset($_POST['submit3'])) 
+			if (isset($_POST['submit3']))
 			{
 				$prenom = $_POST['prenom3'];
 				$nom = $_POST['nom3'];
@@ -155,5 +176,70 @@
 				echo 'Bienvenue ' .$prenom3. ' ' .$nom3. ' !';
 			}
 		?>
+
+<!-- 		//////////////////////////////////////////////////////////////////////////// -->		
+		
+		<?php
+
+			$nom4 = $_POST['nom4'];
+			$prenom4 = $_POST['prenom4'];
+
+		?>
+
+
+
+
+		<form name="form4" method="POST" action="exercice_s5.php">
+
+			Prenom:<br><input type="text" value="<?php echo $prenom4; ?>" name="prenom4"><br>
+			Nom:<br><input type="text" value="<?php echo $nom4; ?>" name="nom4"><br>
+			<input type="submit" name="submit4"><br><br>
+
+		</form>	
+
+
+		<?php
+
+
+            if (isset($_POST['submit4']))
+            {
+                $prenom4 = $_POST['prenom4'];
+                $nom4 = $_POST['nom4'];
+                $nom4 = $prenom4.' '.$nom4;
+            }
+
+            $users = array
+            (
+                "johnny hallyday",
+                "simon bertrand",
+                "tom hanks",
+                "toto tata",
+                "john john"
+            );
+
+            function connexion($tab, $str)
+            {
+                $test = 0;
+
+                foreach ($tab as $value)
+                {
+                    if ($value == $str)
+                    {
+                        $test = 1;
+                    }
+                }
+
+                return $test;
+            }
+
+            if (connexion($users, $nom4) == 1)
+            {
+                $nom4 = ucfirst($nom4);
+                echo 'Bienvenue ' .$nom4. ' !';
+            }
+
+        ?>
+
+
 	</body>
 </html>
