@@ -84,24 +84,11 @@
 		   <br><br><hr><br><br>
 		<h3> Exercice I.II </h3><br>
 
-		<?php
-
-			$nom2 = $_POST['nom2'];
-			$prenom2 = $_POST['prenom2'];
-
-		?>
-
-		<form name="form2" method="POST" action="exercice_s5.php">
-
-			Prenom:<br>
-			<input type="text" value="<?php echo $prenom2; ?>" name="prenom2"><br>
-			Nom:<br>
-			<input type="text" value="<?php echo $nom2; ?>" name="nom2"><br>
-			<input type="submit" name="submit2"><br>
-
-		</form>
 
 		<?php
+
+			$prenom2 = "";
+			$nom2 = "";
 
 			if (isset($_POST['submit2']))
 			{
@@ -116,39 +103,39 @@
 
 		?>
 
+		<form name="form2" method="POST" action="exercice_s5.php">
+
+			Prenom:<br>
+			<input type="text" value="<?php echo $prenom2; ?>" name="prenom2"><br>
+			Nom:<br>
+			<input type="text" value="<?php echo $nom2; ?>" name="nom2"><br>
+			<input type="submit" name="submit2"><br>
+
+		</form>
+
+
 
 		<!-- //////////////////////////////////////////////////////////////////////////////////////////// -->
 
 		<br><br><hr><br><br>
 		<h3> Exercice I.III </h3><br>
 
-		<?php
 
-			$nom3 = $_POST['nom3'];
-			$prenom3 = $_POST['prenom3'];
-
-		?>
-
-
-		<form name="form3" method="POST" action="exercice_s5.php">
-
-			Prenom:<br><input type="text" value="<?php echo $prenom3; ?>" name="prenom3"><br>
-			Nom:<br><input type="text" value="<?php echo $nom3; ?>" name="nom3"><br>
-			<input type="submit" name="submit3"><br><br>
-
-		</form>		
 
 
 		<?php
+
+			$nom3 = '';
+			$prenom3 = '';
 
 			if (isset($_POST['submit3']))
 			{
-				$prenom = $_POST['prenom3'];
-				$nom = $_POST['nom3'];
+				$prenom3 = $_POST['prenom3'];
+				$nom3 = $_POST['nom3'];
 			}
 
-			$prenom3 = strip_tags($prenom);
-			$nom3 = strip_tags($nom);
+			$prenom3 = strip_tags($prenom3);
+			$nom3 = strip_tags($nom3);
 			$test = 0;
 			
 			$users = array
@@ -162,7 +149,7 @@
 
 			foreach ($users as  $value) 
 			{
-				if ($value == $prenom.' '.$nom) 
+				if ($value == $prenom3.' '.$nom3) 
 				{
 					$test = 1;
 				}
@@ -177,28 +164,21 @@
 			}
 		?>
 
-<!-- 		//////////////////////////////////////////////////////////////////////////// -->		
-		
-		<?php
+		<form name="form3" method="POST" action="exercice_s5.php">
 
-			$nom4 = $_POST['nom4'];
-			$prenom4 = $_POST['prenom4'];
-
-		?>
-
-
-
-
-		<form name="form4" method="POST" action="exercice_s5.php">
-
-			Prenom:<br><input type="text" value="<?php echo $prenom4; ?>" name="prenom4"><br>
-			Nom:<br><input type="text" value="<?php echo $nom4; ?>" name="nom4"><br>
-			<input type="submit" name="submit4"><br><br>
+			Prenom:<br><input type="text" value="<?php echo $prenom3; ?>" name="prenom3"><br>
+			Nom:<br><input type="text" value="<?php echo $nom3; ?>" name="nom3"><br>
+			<input type="submit" name="submit3"><br><br>
 
 		</form>	
 
 
+<!-- 		//////////////////////////////////////////////////////////////////////////// -->		
+		
 		<?php
+
+			$nom4 = '';
+			$prenom4 = '';
 
 
             if (isset($_POST['submit4']))
@@ -234,11 +214,18 @@
 
             if (connexion($users, $nom4) == 1)
             {
-                $nom4 = ucfirst($nom4);
                 echo 'Bienvenue ' .$nom4. ' !';
             }
-
         ?>
+
+		<form name="form4" method="POST" action="exercice_s5.php">
+
+			Prenom:<br><input type="text" value="<?php echo $prenom4; ?>" name="prenom4"><br>
+			Nom:<br><input type="text" value="<?php echo $nom4; ?>" name="nom4"><br>
+			<input type="submit" name="submit4"><br><br>
+
+		</form>	            
+
 
 
 	</body>
