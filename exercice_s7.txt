@@ -1,0 +1,27 @@
+-- EXERCICE 1 :
+
+	Ecrire un script PHP qui vérifie si une adresse email contient bien le symbole @.
+	Si oui, afficher : "Valid email, symbol found at position X". Sinon afficher "Invalid email".
+
+	Pour faire vos tests, vous pouvez créer une variable "bidon" du type $mail = "simon@gmail.com";
+
+-- EXERCICE 2 :
+
+	Ecrire un script PHP qui remplace le mot "random" par le mot "beautiful" dans cette phrase :
+
+	$sentence = "This is a random sentence";
+
+
+-- EXERCICE 3 :
+
+	Ecrire un script PHP qui supprime tous les (slashs) / de cette chaine de caractère :
+	$movies = "/Star Wars/Fight Club/Intouchables/Night Call//";
+
+
+-- EXERCICE 4 :
+
+	Ecrire un script PHP qui affiche le dernier mot d'une phrase en utilisant 2 fonctions : 
+		 explode() et count()
+	
+	Vous pouvez utiliser la phrase précédente pour tester : $sentence = "This is a random sentence";
+ 
