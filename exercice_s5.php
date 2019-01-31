@@ -317,6 +317,7 @@
 
 
 		 	<br><br><hr><br><br>
+		<h3> Exercice III </h3><br>
 		<h3> Exercice III.I </h3><br>
 
 		<?php 
@@ -360,7 +361,75 @@
 		 ?>
 			<br><br><hr><br><br>
 		<h3> Exercice IV </h3><br>
+		<h3> Exercice IV.I </h3><br>
 
+		<?php 
+
+			for ($i=0; $i < 11; $i++) 
+			{ 
+				echo $i. ' multiplié par deux est égal à ' .($i*2). '.<br>';
+			}
+
+			 ?>
+
+			<br><br><hr><br><br>
+		<h3> Exercice IV.II </h3><br>
+
+		<?php 
+
+			$x = 4;
+			$multi = array ();
+
+			for ($i=0; $i < 11; $i++) 
+			{ 
+				$multi[$i] = ($i*$x);
+			}
+
+			var_dump($multi);
+		 ?>
+
+			<br><br><hr><br><br>
+		<h3> Exercice IV.III </h3><br>
+
+		<?php 
+
+			function tabMulti($var)
+			{
+				$tableau = array ();
+
+				for ($i=0; $i < 11; $i++) 
+				{ 
+					$tableau[$i] = ($i*$var);
+				}
+
+				return $tableau;
+			}
+
+			var_dump(tabMulti(3));
+
+		 ?>
+
+			<br><br><hr><br><br>
+		<h3> Exercice IV.IV </h3><br>
+
+		<form name="form7" method="POST" action="exercice_s5.php">
+
+			Entrez le nombre a multiplier:<br><br>
+			<input type="text" value="" name="nombre"><br>
+			<input type="submit" name="submit7"><br>
+
+		</form>
+
+		<?php
+
+			if (isset($_POST['submit7'])) 
+			{
+				$x = $_POST['nombre'];
+
+				var_dump(tabMulti($x));
+			}
+
+		 ?>
 
 	</body>
 </html>
