@@ -158,10 +158,6 @@
 			$prenom3 = ucfirst($prenom3);
 			$nom3 = ucfirst($nom3);
 
-			if ($test == 1) 
-			{
-				echo 'Bienvenue ' .$prenom3. ' ' .$nom3. ' !';
-			}
 		?>
 
 		<form name="form3" method="POST" action="exercice_s5.php">
@@ -171,6 +167,15 @@
 			<input type="submit" name="submit3"><br><br>
 
 		</form>	
+
+		<?php 
+
+			if ($test == 1) 
+			{
+				echo 'Bienvenue ' .$prenom3. ' ' .$nom3. ' !';
+			}
+
+		 ?>
 
 
 <!-- 		//////////////////////////////////////////////////////////////////////////// -->		
@@ -212,10 +217,7 @@
                 return $test;
             }
 
-            if (connexion($users, $nom4) == 1)
-            {
-                echo 'Bienvenue ' .$nom4. ' !';
-            }
+
         ?>
 
 		<form name="form4" method="POST" action="exercice_s5.php">
@@ -224,8 +226,140 @@
 			Nom:<br><input type="text" value="<?php echo $nom4; ?>" name="nom4"><br>
 			<input type="submit" name="submit4"><br><br>
 
-		</form>	            
+		</form>	  
 
+		<?php 
+
+			if (connexion($users, $nom4) == 1)
+            {
+                echo 'Bienvenue ' .$nom4. ' !';
+            } 
+
+        ?>         
+
+        <!-- ///////////////////////////////////////////////////////////////////////// --> 
+
+		<br><br><hr><br><br>
+        <h2> Exercice II</h2><br>
+		<h3> Exercice II.I </h3><br>
+
+		<?php 
+
+			$mail = 'simon@yopmail.com';
+
+			$pos = strpos($mail, '@');
+
+			if ($pos) 
+			{
+				echo $mail. ' est une adresse valide !';
+			}
+			else
+			{
+				echo $mail. ' n\'est pas une adresse valide !';
+			}
+
+		 ?>
+
+		<br><br><hr><br><br>
+		<h3> Exercice II.II </h3><br>
+
+		<?php 
+
+			function VerifiMail($mail)
+			{
+				$test = 0;
+				$position = strpos($mail, '@');
+
+				if ($position) 
+				{
+					$test = 1;
+				}
+
+				return $test;
+			}
+
+			if (VerifiMail($mail) == 1) 
+			{
+				echo $mail. ' est une adresse valide !';
+			}
+
+		 ?>
+
+
+		 <br><br><hr><br><br>
+		<h3> Exercice II.III </h3><br>
+
+		<form name="form5" method="POST" action="exercice_s5.php">
+
+			Mail:<br><input type="text" value="" name="mail"><br>
+			<input type="submit" name="submit5"><br><br>
+
+		</form>
+
+
+		<?php 
+
+			if (isset($_POST['submit5'])) 
+			{
+				$mail2 = $_POST['mail'];
+
+				if (VerifiMail($mail2) == 1) 
+				{
+					echo '<div style="color:chartreuse";>' .$mail2. ' est une adresse mail valide !</div>';
+				}
+				else
+				{
+					echo '<div style="color:magenta";>' .$mail2. ' n\'est pas une adresse mail valide !</div>';
+				}
+			}
+
+		 ?>
+
+
+		 	<br><br><hr><br><br>
+		<h3> Exercice III.I </h3><br>
+
+		<?php 
+			echo 2*4;
+		 ?>
+		
+			<br><br><hr><br><br>
+		<h3> Exercice III.II </h3><br>
+
+		<?php 
+			function multiplic($x, $y)
+			{
+				$resul = $x * $y;
+				echo $resul;
+			}
+
+			multiplic(2, 4);
+		 ?>
+
+			<br><br><hr><br><br>
+		<h3> Exercice III.III </h3><br>
+
+		<form name="form6" method="POST" action="exercice_s5.php">
+
+			Premier nombre:<br><input type="text" value="" name="premier"><br>
+			Deuxième nombre:<br><input type="text" value="" name="deuxieme"><br>
+			<input type="submit" name="submit6"><br><br>
+
+		</form>
+
+		<?php 
+
+			if (isset($_POST['submit6'])) 
+			{
+				$x = $_POST['premier'];
+				$y = $_POST['deuxieme'];
+
+				multiplic($x, $y);
+			}
+
+		 ?>
+			<br><br><hr><br><br>
+		<h3> Exercice IV </h3><br>
 
 
 	</body>
