@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Exercice_s5</title>
-</head>
-<style>
-			body
-			{
-				text-align: center; 
-				background-color: black; 
-				color: deeppink; 
-				font-family: monospace; 
-				font-size: 20px
-			}
+	<head>
+		<meta charset="UTF-8">
+		<title>Exercice_s5</title>
+	</head>
+		<style>
+				body
+				{
+					text-align: center; 
+					background-color: black; 
+					color: deeppink; 
+					font-family: monospace; 
+					font-size: 20px
+				}
 
-			h3
-			{
-				color: black;
-				text-decoration: underline ;
-				text-shadow: 0px 0px 5px deeppink;
-			}
+				h3
+				{
+					color: black;
+					text-decoration: underline ;
+					text-shadow: 0px 0px 5px deeppink;
+				}
 
-			h2
-			{
-				color: black;
-				text-decoration: underline ;
-				letter-spacing: -5px;
-				text-shadow: 0px 0px 20px deeppink;
-				text-decoration-style: wavy;			
-			}
+				h2
+				{
+					color: black;
+					text-decoration: underline ;
+					letter-spacing: -5px;
+					text-shadow: 0px 0px 20px deeppink;
+					text-decoration-style: wavy;			
+				}
 
-			h1
-			{
-				color: black;
-				text-decoration: underline ;
-				letter-spacing: 15px;
-				text-shadow: 0px 0px 20px deeppink;
-				text-decoration-style: wavy;
-				text-transform: uppercase;			
-			}
+				h1
+				{
+					color: black;
+					text-decoration: underline ;
+					letter-spacing: 15px;
+					text-shadow: 0px 0px 20px deeppink;
+					text-decoration-style: wavy;
+					text-transform: uppercase;			
+				}
 
-			p
-			{
-				font-size: 55px;
-				font-weight: bolder;
-			}
+				p
+				{
+					font-size: 55px;
+					font-weight: bolder;
+				}
 		</style>
 	<body>
 
@@ -178,7 +178,7 @@
 		 ?>
 
 
-<!-- 		//////////////////////////////////////////////////////////////////////////// -->		
+	<!-- 		//////////////////////////////////////////////////////////////////////////// -->		
 		
 		<?php
 
@@ -186,39 +186,39 @@
 			$prenom4 = '';
 
 
-            if (isset($_POST['submit4']))
-            {
-                $prenom4 = $_POST['prenom4'];
-                $nom4 = $_POST['nom4'];
-                $nom4 = $prenom4.' '.$nom4;
-            }
+	        if (isset($_POST['submit4']))
+	        {
+	            $prenom4 = $_POST['prenom4'];
+	            $nom4 = $_POST['nom4'];
+	            $nom4 = $prenom4.' '.$nom4;
+	        }
 
-            $users = array
-            (
-                "johnny hallyday",
-                "simon bertrand",
-                "tom hanks",
-                "toto tata",
-                "john john"
-            );
+	        $users = array
+	        (
+	            "johnny hallyday",
+	            "simon bertrand",
+	            "tom hanks",
+	            "toto tata",
+	            "john john"
+	        );
 
-            function connexion($tab, $str)
-            {
-                $test = 0;
+	        function connexion($tab, $str)
+	        {
+	            $test = 0;
 
-                foreach ($tab as $value)
-                {
-                    if ($value == $str)
-                    {
-                        $test = 1;
-                    }
-                }
+	            foreach ($tab as $value)
+	            {
+	                if ($value == $str)
+	                {
+	                    $test = 1;
+	                }
+	            }
 
-                return $test;
-            }
+	            return $test;
+	        }
 
 
-        ?>
+	    ?>
 
 		<form name="form4" method="POST" action="exercice_s5.php">
 
@@ -231,16 +231,16 @@
 		<?php 
 
 			if (connexion($users, $nom4) == 1)
-            {
-                echo 'Bienvenue ' .$nom4. ' !';
-            } 
+	        {
+	            echo 'Bienvenue ' .$nom4. ' !';
+	        } 
 
-        ?>         
+	    ?>         
 
-        <!-- ///////////////////////////////////////////////////////////////////////// --> 
+	    <!-- ///////////////////////////////////////////////////////////////////////// --> 
 
 		<br><br><hr><br><br>
-        <h2> Exercice II</h2><br>
+	    <h2> Exercice II</h2><br>
 		<h3> Exercice II.I </h3><br>
 
 		<?php 
